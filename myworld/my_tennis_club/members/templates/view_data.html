@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stored Form Data</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h1>Stored Form Data</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>First Name</th>
+                <th>Middle Name</th>
+                <th>Last Name</th>
+                <th>Date of Birth</th>
+                <th>College Name</th>
+                <th>Year of Study</th>
+                <th>Academic Progress</th>
+                <th>Result</th>
+                <th>Exercise Time</th>
+                <th>Sleep Time</th>
+                <th>Food</th>
+                <th>Learned From Friend</th>
+                <th>Extra Activity</th>
+                <th>Requests for 3 Months</th>
+                <th>Book Read</th>
+                <th>Ladder Status</th>
+                <th>Book Review</th>
+                <th>Essay</th>
+                <th>Action for Next Month</th>
+                <th>Difficulties</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in data %}
+            <tr>
+                <td>{{ item.first_name }}</td>
+                <td>{{ item.middle_name }}</td>
+                <td>{{ item.last_name }}</td>
+                <td>{{ item.date_of_birth }}</td>
+                <td>{{ item.college_name }}</td>
+                <td>{{ item.year_of_study }}</td>
+                <td>
+                    <ul>
+                        {% for progress in item.academic_progress %}
+                        <li>{{ progress }}</li>
+                        {% endfor %}
+                    </ul>
+                </td>
+                <td>{{ item.result }}</td>
+                <td>{{ item.exercise_time }}</td>
+                <td>{{ item.sleep_time }}</td>
+                <td>{{ item.food }}</td>
+                <td>{{ item.learned_from_friend }}</td>
+                <td>{{ item.extra_activity }}</td>
+                <td>
+                    <ul>
+                        {% for req in item.req_for_3_months %}
+                        <li>{{ req }}</li>
+                        {% endfor %}
+                    </ul>
+                </td>
+                <td>{{ item.book_read }}</td>
+                <td>{{ item.ladder_status }}</td>
+                <td>{{ item.book_review }}</td>
+                <td>{{ item.essay }}</td>
+                <td>{{ item.action_for_next_month }}</td>
+                <td>{{ item.difficulties }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

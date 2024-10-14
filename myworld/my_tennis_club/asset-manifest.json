@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/static/css/main.0bccdbf0.css",
+    "main.js": "/static/js/main.075570f1.js",
+    "static/js/453.7de98e3a.chunk.js": "/static/js/453.7de98e3a.chunk.js",
+    "static/media/GEFLogo.png": "/static/media/GEFLogo.def23dc100c53a18ae2f.png",
+    "index.html": "/index.html",
+    "main.0bccdbf0.css.map": "/static/css/main.0bccdbf0.css.map",
+    "main.075570f1.js.map": "/static/js/main.075570f1.js.map",
+    "453.7de98e3a.chunk.js.map": "/static/js/453.7de98e3a.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0bccdbf0.css",
+    "static/js/main.075570f1.js"
+  ]
+}
